@@ -1,0 +1,36 @@
+{
+  "name": "webprog2assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build": "tsc",
+  "start": "node build/app.js",
+  "dev": "tsx watch src/app.ts",
+  "typecheck": "tsc --noEmit"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s00265100/webprog2Assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/s00265100/webprog2Assignment/issues"
+  },
+  "homepage": "https://github.com/s00265100/webprog2Assignment#readme",
+  "dependencies": {
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
