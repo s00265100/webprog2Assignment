@@ -107,3 +107,22 @@ DELETE {{endpoint}}/{{perfumeId}}
 
 ### 12. GET - Check deleted perfume cannot be found
 GET {{endpoint}}/{{perfumeId}}
+### Create a review
+# @name createReview
+POST http://localhost:3000/api/v1/reviews
+Content-Type: application/json
+
+{
+  "perfumeId": "YOUR_PERFUME_ID",
+  "reviewerName": "Mansura",
+  "rating": 5,
+  "comment": "Really nice perfume"
+}
+
+
+### Get reviews for one perfume
+GET http://localhost:3000/api/v1/reviews/perfume/YOUR_PERFUME_ID
+
+
+### Delete review
+DELETE http://localhost:3000/api/v1/reviews/{{createReview.response.body._id}}
