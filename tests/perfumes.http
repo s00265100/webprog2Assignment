@@ -1,0 +1,109 @@
+@endpoint = http://localhost:3000/api/v1/perfumes
+
+
+### 1. Ping server
+GET http://localhost:3000/ping
+
+
+### 2. POST - Create valid perfume
+# @name createPerfume
+POST {{endpoint}}
+Content-Type: application/json
+
+{
+  "name": "Libre",
+  "brand": "YSL",
+  "scentType": "Floral",
+  "price": 110,
+  "description": "Floral and warm fragrance",
+  "gender": "Women",
+  "rating": 4.5
+}
+
+
+### Save ID from created perfume
+@perfumeId = {{createPerfume.response.body._id}}
+
+
+### 3. POST - Invalid perfume
+POST {{endpoint}}
+Content-Type: application/json
+
+{
+  "name": "",
+  "brand": "YSL",
+  "scentType": "Floral",
+  "price": 110,
+  "description": "Invalid perfume test",
+  "gender": "Women",
+  "rating": 8
+}
+
+
+### 4. GET - Get all perfumes
+GET {{endpoint}}
+
+
+### 5. GET - Get one perfume successfully
+GET {{endpoint}}/{{perfumeId}}
+
+
+### 6. GET - Perfume does not exist
+GET {{endpoint}}/000000000000000000000000
+
+
+### 7. PUT - Update perfume successfully
+PUT {{endpoint}}/{{perfumeId}}
+Content-Type: application/json
+
+{
+  "name": "Libre Intense",
+  "brand": "YSL",
+  "scentType": "Floral",
+  "price": 120,
+  "description": "Updated perfume description",
+  "gender": "Women",
+  "rating": 5
+}
+
+
+### 8. PUT - Invalid perfume data
+PUT {{endpoint}}/{{perfumeId}}
+Content-Type: application/json
+
+{
+  "name": "Libre Intense",
+  "brand": "YSL",
+  "scentType": "Floral",
+  "price": 120,
+  "description": "Invalid rating test",
+  "gender": "Women",
+  "rating": 10
+}
+
+
+### 9. PUT - Perfume does not exist
+PUT {{endpoint}}/000000000000000000000000
+Content-Type: application/json
+
+{
+  "name": "Test Perfume",
+  "brand": "Test Brand",
+  "scentType": "Fresh",
+  "price": 50,
+  "description": "Testing missing perfume",
+  "gender": "Unisex",
+  "rating": 4
+}
+
+
+### 10. DELETE - Perfume does not exist
+DELETE {{endpoint}}/000000000000000000000000
+
+
+### 11. DELETE - Delete perfume successfully
+DELETE {{endpoint}}/{{perfumeId}}
+
+
+### 12. GET - Check deleted perfume cannot be found
+GET {{endpoint}}/{{perfumeId}}
