@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "tsc",
-  "start": "node build/server.js",
-  "dev": "tsx watch src/server.ts",
-  "typecheck": "tsc --noEmit"
-},
+    "build": "tsc",
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/s00265100/webprog2Assignment.git"
