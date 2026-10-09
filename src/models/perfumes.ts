@@ -34,7 +34,43 @@ const perfumeSchema = new Schema<IPerfume>(
 );
 
 export const PerfumeModel = model<IPerfume>("Perfume", perfumeSchema);
-
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     CreatePerfumeInput:
+ *       type: object
+ *       required:
+ *         - name
+ *         - brand
+ *         - scentType
+ *         - price
+ *         - description
+ *         - gender
+ *         - rating
+ *       properties:
+ *         name:
+ *           type: string
+ *           example: Libre
+ *         brand:
+ *           type: string
+ *           example: YSL
+ *         scentType:
+ *           type: string
+ *           example: Floral
+ *         price:
+ *           type: number
+ *           example: 110
+ *         description:
+ *           type: string
+ *           example: Floral and warm fragrance
+ *         gender:
+ *           type: string
+ *           example: Women
+ *         rating:
+ *           type: number
+ *           example: 4.5
+ */
 export const createPerfumeZSchema = z.object({
   name: z.string().min(1),
   brand: z.string().min(1),

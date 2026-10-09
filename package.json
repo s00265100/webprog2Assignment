@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "tsc",
-  "start": "node build/server.js",
-  "dev": "tsx watch src/server.ts",
-  "typecheck": "tsc --noEmit",
-  "test": "vitest run",
-  "test:watch": "vitest"
-},
+    "build": "tsc",
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/s00265100/webprog2Assignment.git"
@@ -27,12 +27,16 @@
     "dotenv": "^18.0.6",
     "express": "^5.2.1",
     "mongoose": "^9.11.1",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
     "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.4",
     "@types/supertest": "^7.2.1",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "supertest": "^7.3.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
