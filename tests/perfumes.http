@@ -116,11 +116,11 @@ Content-Type: application/json
   "perfumeId": "YOUR_PERFUME_ID",
   "reviewerName": "Mansura",
   "rating": 5,
-  "comment": "Really nice perfume"
+  "comment": "Really a nice perfume"
 }
 
 
-### Get reviews for one perfume
+### Get reviews for one perfume 
 GET http://localhost:3000/api/v1/reviews/perfume/YOUR_PERFUME_ID
 
 
