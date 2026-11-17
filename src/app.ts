@@ -3,9 +3,10 @@ import perfumeRoutes from "./routes/perfumes";
 import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from './config/swagger';
 import reviewRoutes from "./routes/reviews";
+import cors from 'cors';
 
 export const app: Application = express();
-
+app.use(cors());
 app.use(express.json());
 
 app.use(

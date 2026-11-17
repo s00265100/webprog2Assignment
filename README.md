@@ -28,8 +28,3 @@ npm install -D vitest supertest @types/supertest typescript =Installs your testi
 npm run test = runs all test
 
 
-
-s00265100_db_user
-k1pxTLXpms9T06CU
-https://downloads.mongodb.com/compass/mongodb-compass-1.50.0-win32-x64.zip
-connection string : mongodb+srv://s00265100_db_user:k1pxTLXpms9T06CU@cluster0.sxeyzib.mongodb.net/
